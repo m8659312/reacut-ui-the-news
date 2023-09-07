@@ -1,0 +1,173 @@
+
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Alert, SafeAreaView } from 'react-native';
+
+
+import { Stack, Button ,TextInput} from "@react-native-material/core";
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+
+import {Dimensions} from 'react-native';
+import { Divider } from "@react-native-material/core";
+
+import { useNavigation } from '@react-navigation/native';
+
+
+export default function App() {
+
+  const handleLoginButton = () => {
+    Alert.alert("test")
+  }
+
+  return (
+
+    <SafeAreaView>
+      <View style={styles.container}>
+        <Text style={styles.title}>
+          Welcome to the app
+        </Text>
+        <Divider style={{ marginBottom: 25 }} leadingInset={16} color="black" />
+        <TextInput style={styles.textField} placeholder="Enter email" variant="outlined" />
+        <View style={{ marginBottom: 25 }}/>
+        <TextInput style={styles.textField} placeholder="Enter Password" variant="outlined"  />
+        <Button onPress={handleLoginButton} title="Login" style={styles.loginButton}/>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const windowWidth = Dimensions.get('window').width;
+
+
+const styles = StyleSheet.create({
+
+  title: {
+    marginBottom: 25
+  },
+
+  loginButton: {
+    marginTop: 25
+  },
+
+  textField: {
+
+  },
+  
+  container: {
+    backgroundColor: '#fff',
+    padding: 25
+  },
+
+
+  containerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width : 300 
+
+  },
+
+  input: {
+    height: 40,
+    margin: 12,
+    width : windowWidth,
+    padding: 10,
+
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Alert, SafeAreaView } from 'react-native';
+
+
+import { Stack, Button ,TextInput} from "@react-native-material/core";
+import { Colors } from 'react-native/Libraries/NewAppScreen';
+
+import {Dimensions} from 'react-native';
+
+
+
+export default function App() {
+  return (
+
+
+    <SafeAreaView style={styles.container}>
+
+<View style = {{height : 33}} ></View>
+
+      <View style={styles.container}>
+
+
+        <Text style={styles.title}>
+        Wel come to the app
+        </Text>
+
+        <View style = {{height : 33}} ></View>
+
+       
+       <View style = {{height : 33 , width : 150, backgroundColor : 'red' }}>
+
+       </View>
+        <TextInput label="Enter email" variant="standard"  />
+
+        <View style = {{height : 33}} ></View>
+
+        <TextInput label="Enter Password" variant="standard" />
+
+
+        <Button title="Login" style={{ alignSelf: "center", marginTop: 40, backgroundColor : 'red' }}/>
+
+
+
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const windowWidth = Dimensions.get('window').width;
+
+
+const styles = StyleSheet.create({
+
+  
+  container: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+
+  containerRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width : 300 
+
+  },
+
+  input: {
+    height: 40,
+    margin: 12,
+    width : windowWidth,
+    padding: 10,
+
+  }
+});
